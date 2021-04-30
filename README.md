@@ -99,7 +99,9 @@ The real trick of this function is creating symmetry. Each square is paired with
 
 Centroid of rectangle is defined as the center point where all the diagonals intersect each other. The diagonals of the rectangle intersect at width b/2 from x - axis and at height h/2 from y - axis. It can also be termed as the geometric center.
 
-### Element values and symmetrical colors for a row in a 7x7 image
+### Run-Length Encoder
+
+Element values and symmetrical colors for a row in a 7x7 image
 
 ![](elements.PNG)
 
