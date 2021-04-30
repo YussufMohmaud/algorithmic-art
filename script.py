@@ -1,9 +1,10 @@
+
 import PIL, random, sys
 from PIL import Image, ImageDraw
 
 pixel = 1500
 
-ch = lambda: random.randint(50,215)
+ch = lambda: random.randint(0,255)
 rgb = lambda: (ch(), ch(), ch())
 
 # Run-length encoding (RLE) is a form of lossless data

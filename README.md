@@ -2,11 +2,11 @@
 
 ## What is an image processing?
 
-Image processing is the output of self-generated pixels and may decide for itself; because of statistical randomness and algebraic rules. That is all the if-then conditional statements are in the first place. The trick is finding ways to make algebra create something perceptual by using RGB pixel values.
+Image processing is the output of self-generated pixels and may decide for itself; because of statistical randomness and algebraic rules. That is all the if-then conditional statements are in the first place. The trick is finding ways to make algebra create something perceptual by using RGB intensity values.
 
-Images processing determines the RGB color space as the HSL color space of each element-time. Each color space plays a part in advancing the system through each generation. Although the statistics are simple and easy to understand, complex patterns emerge from randomness and form fascinating results.
+Images processing determines the RGB color space as the pixel color space of each element-time. Each color space plays a part in advancing the system through each generation. Although the statistics are simple and easy to understand, complex patterns emerge from randomness and form fascinating results.
 
-Algebra is responsible for creating boundaries, but even something so exciting as life is predictable. Since the general rule determines the factor for each subsequent generation. The way to produce unforeseeable results is to introduce randomization at the very beginning. In the beginning, there was a random pixel that made every subsequent generation unique without the need to change the rules.
+Algebra is responsible for creating tiles, but even something so exciting as life is predictable. Since the general rule determines the factor for each subsequent generation. The way to produce unforeseeable results is to introduce randomization at the very beginning. In the beginning, there was a random pixel that made every subsequent generation unique without the need to change the rules.
 
 The best example of image processing is a combination of both randomness and predictability to manifest something perceptual that is also statistically irreproducible.
 
@@ -14,17 +14,17 @@ The best example of image processing is a combination of both randomness and pre
 
 ### Experience
 
-Image processing is an opportunity to demo my skills. This domain expertise is a gateway into concepts like abstract art.
+Image processing is an opportunity to demo my skills. This domain expertise is a gateway into concepts like computer vision.
 
-### Results
+### Result
 
-Images that do not (test) resemble each other, but are the results of the same system.
+Images that do not resemble each other (test), but are the results of the same system (train).
 
 ## Where to begin
 
 The pixel is the most crucial step to perception. Here is the tech required to achieve the result. My image processing project uses Python and to help with pixel manipulation will be Pillow.
 
-## Image [TILES][NUM_OF_IMG][IMGTILES]
+## Image [IMGTILES][NUM_OF_IMG][TILES]
 
 In computer graphics, an image is a 2D bitmap that is integrated into a larger scene, most often in a file. Originally, the term "image" referred to fixed-sized objects composited together, by hardware, with a background.
 
@@ -73,7 +73,7 @@ pixel = imgTiles
 newImg = Image.new('RGB', (pixel, pixel))
 ```
 
-The two for loops are responsible for defining a border for each image, basically dividing the dimensions of the picture by the number of images requested. These values are used to determine the coordinates for each image.
+The two for loops are responsible for defining a tile for each image, basically dividing the dimensions of the picture by the number of images requested. These values are used to determine the coordinates for each image.
 
 ```python
   for x in range(0, num_of_img):
@@ -85,11 +85,11 @@ The two for loops are responsible for defining a border for each image, basicall
       create_image((topLeftX, topLeftY, botRightX, botRightY), draw, tiles)
 ```
 
-Let’s ignore padding and take a look at the image. Imagine that each of the four squares represents a image with a size of 1. The border that is being passed to the next function refers to the top left and bottom right coordinates. So the tuple for the top left image would be (0,0,1,1) whereas the tuple for the top right would be (1,0,2,1). These will be used as the dimensions and base coordinates for the squares of each image.
+Let’s ignore padding and take a look at the image. Imagine that each of the four squares represents a image with a size of 1. The tile that is being passed to the next function refers to the top left and bottom right coordinates. So the tuple for the top left image would be (0,0,1,1) whereas the tuple for the top right would be (1,0,2,1). These will be used as the dimensions and base coordinates for the squares of each image.
 
-### Example of determining image borders
+### Example of determining image tiles
 
-The function create_border determines the border for each square within the picture. The same process for determining the border is applied here, only instead of the full image we’re using a pre-determined border to work inside. These final coordinates for each square will be used in the next function to actually draw the image.
+The function tile determines the tile for each square within the picture. The same process for determining the tile is applied here, only instead of the full image we’re using a pre-determined tile to work inside. These final coordinates for each square will be used in the next function to actually draw the image.
 
 ### Example of breaking down a 3x3 image
 
@@ -107,4 +107,4 @@ Element values and symmetrical colors for a row in a mxn image
 
 ## Conclusion
 
-As create_square receives its parameters from create_image, it uses a queue and the element values from create_border to ensure symmetry. The first occurrence of the element values have their colors push forward onto the queue and the mirrored squares black the colors off or 0 or False.
+As create_square receives its parameters from create_image, it uses a queue and the element values from tile to ensure symmetry. The first occurrence of the element values have their colors push forward onto the queue and the mirrored squares black the colors off or 0 or False.
