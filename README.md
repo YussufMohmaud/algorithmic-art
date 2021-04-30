@@ -101,7 +101,7 @@ Centroid of rectangle is defined as the center point where all the diagonals int
 
 ### Run-Length Encoder
 
-Element values and symmetrical colors for a row in a 7x7 image
+Element values and symmetrical colors for a row in a mxn image
 
 ![](elements.PNG)
 
